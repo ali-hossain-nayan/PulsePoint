@@ -6,6 +6,8 @@ import { useGetPosts, useSearchPosts } from "@/lib/react-query/queriesAndMutatio
 import Loader from "@/components/shared/Loader";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+// import { Models } from "@/lib/types"; 
+// Ensure this import path is correct
 
 const Explore = () => {
   const { ref, inView } = useInView();
@@ -73,7 +75,7 @@ const Explore = () => {
           <p className="text-light-4 mt-10 text-center w-full">End of posts</p>
         ) : (
           posts.pages.map((item, index) => (
-            item && <GridPostList key={`page-${index}`} posts={item.documents ?? []} />
+            item && <GridPostList key={`page-${index}`} posts={item.documents || []} />
           ))
         )}
       </div>
