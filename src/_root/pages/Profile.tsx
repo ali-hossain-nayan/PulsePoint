@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { LikedPost } from ".";
 import { useUserContext } from "@/context/AuthContext";
 // import { useGetUserById } from "@/lib/react-query/queries";
-import { useGetPostById, useGetUserById } from "@/lib/react-query/queriesAndMutations";
+import {  useGetUserById } from "@/lib/react-query/queriesAndMutations";
 // import { GridPostList, Loader } from "@/components/shared";
 import GridPostList from "@/components/shared/GridPostList";
 import Loader from "@/components/shared/Loader";
